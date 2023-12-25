@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "outDir": "./docs/assets/js"
+  },
+  "files": ["./src/index.ts"]
+}
