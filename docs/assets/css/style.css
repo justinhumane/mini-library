@@ -48,6 +48,7 @@ input {
   display: flex;
   align-items: end;
   position: relative;
+  cursor: pointer;
 }
 
 .book::before {
@@ -158,6 +159,7 @@ button {
 .close {
   position: absolute;
   top: -5.125rem;
+  cursor: pointer;
 }
 
 .hide {
