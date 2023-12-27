@@ -4,5 +4,5 @@
     "module": "ESNext",
     "outDir": "./docs/assets/js"
   },
-  "files": ["./src/index.ts"]
+  "include": ["./src"]
 }

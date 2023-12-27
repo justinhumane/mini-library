@@ -41,19 +41,24 @@ input {
 }
 
 .book {
+  width: 12.5rem;
   height: 15rem;
   color: #fff;
   border-radius: 0.125rem;
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.08);
   display: flex;
-  align-items: end;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   cursor: pointer;
+  padding: 1rem 0.94rem 1rem 1.63rem;
+  background: linear-gradient(208deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%);
 }
 
 .book::before {
   width: 0.1875rem;
   height: 100%;
+  top: 0;
   left: 0.5rem;
   position: absolute;
   content: "";
@@ -64,10 +69,6 @@ input {
     rgba(0, 0, 0, 0.4) 67.71%,
     rgba(0, 0, 0, 0) 100%
   );
-}
-
-.book-text {
-  padding: 1rem 0.94rem 1rem 1.63rem;
 }
 
 .modal {
@@ -96,13 +97,17 @@ input {
   border-radius: 0.125rem;
   box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.08);
   display: flex;
-  align-items: end;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
+  padding: 1.76rem 1.82rem 1.76rem 3.16rem;
+  background: linear-gradient(208deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 92.13%);
 }
 
 .modal-book::before {
   width: 0.35081rem;
   height: 100%;
+  top: 0;
   left: 0.99rem;
   position: absolute;
   content: "";
@@ -115,8 +120,12 @@ input {
   );
 }
 
-.modal-book-text {
-  padding: 1.76rem 1.82rem 1.76rem 3.16rem;
+.modal-book h2 {
+  font-size: 2.375rem;
+}
+
+.modal-book p {
+  font-size: 1.125rem;
 }
 
 .details h2 {
