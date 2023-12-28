@@ -25,7 +25,6 @@ const fetchBooks = async (): Promise<DetailedBook[]> => {
     console.log(err);
   }
 };
-fetchBooks().then(() => renderBooks());
 
 const renderBooks = (): void => {
   document.querySelector("h1").textContent = `${books.length} Classical Children Books`;
@@ -40,3 +39,7 @@ const renderBooks = (): void => {
     debounce(() => searchBook(searchInput.value), 1000)();
   });
 };
+
+fetchBooks().then(() => renderBooks());
+
+export { books };

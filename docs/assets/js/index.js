@@ -21,7 +21,6 @@ const fetchBooks = async () => {
         console.log(err);
     }
 };
-fetchBooks().then(() => renderBooks());
 const renderBooks = () => {
     document.querySelector("h1").textContent = `${books.length} Classical Children Books`;
     const bookContainer = document.querySelector(".book-container");
@@ -33,3 +32,5 @@ const renderBooks = () => {
         debounce(() => searchBook(searchInput.value), 1000)();
     });
 };
+fetchBooks().then(() => renderBooks());
+export { books };

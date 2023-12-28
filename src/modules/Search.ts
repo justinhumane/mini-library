@@ -1,3 +1,5 @@
+import { books } from "../index.js";
+
 const searchBook = (keyword: string): void => {
   const bookElements: NodeListOf<HTMLElement> = document.querySelectorAll(".book");
 
@@ -9,6 +11,9 @@ const searchBook = (keyword: string): void => {
       bookElement.classList.remove("hide");
     }
   });
+
+  const hiddenBooks: number = document.getElementsByClassName("book hide").length;
+  document.querySelector("h1").textContent = `${books.length - hiddenBooks} Classical Children Books`;
 };
 
 export default searchBook;
