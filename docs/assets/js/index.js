@@ -1,7 +1,8 @@
 import debounce from "./modules/Debounce.js";
 import createDetailedBook from "./modules/CreateBook.js";
 import searchBook from "./modules/Search.js";
-import { renderBook, toggleModalVisibilty } from "./modules/Books.js";
+import { renderBook } from "./modules/BookUtility.js";
+import { toggleModalVisibilty } from "./modules/ModalUtility.js";
 let books = [];
 const closeButton = document.querySelector(".close");
 closeButton.addEventListener("click", () => {

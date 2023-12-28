@@ -1,5 +1,6 @@
 import { DetailedBook } from "../interfaces/Book";
 import Detail from "../interfaces/Detail";
+import { pushModalInfo } from "./ModalUtility.js";
 
 const renderBook = (book: DetailedBook, style: string): HTMLDivElement => {
   const bookElement: HTMLDivElement = document.createElement("div");
@@ -60,20 +61,4 @@ const renderBookInfo = (book: DetailedBook): HTMLDivElement => {
   return detailsElement;
 };
 
-const pushModalInfo = (book: DetailedBook): void => {
-  const modalBookContainer: HTMLDivElement = document.querySelector(".modal-book-container");
-  while (modalBookContainer.lastElementChild) {
-    modalBookContainer.removeChild(modalBookContainer.lastElementChild);
-  }
-
-  modalBookContainer.append(renderBook(book, "modal-book"), renderBookInfo(book));
-
-  toggleModalVisibilty();
-};
-
-const toggleModalVisibilty = (): void => {
-  const modal: HTMLDivElement = document.querySelector(".modal");
-  modal.classList.toggle("hide");
-};
-
-export { renderBook, toggleModalVisibilty };
+export { renderBook, renderBookInfo };
